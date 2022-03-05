@@ -1,12 +1,11 @@
 {
   "name": "cryptoanimals",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Lucas R.",
   "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build"
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.3.2",
