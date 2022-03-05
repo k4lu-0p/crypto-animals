@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="196" height="189" viewBox="0 0 196 189">
+  <defs>
+    <filter id="Rectangle_28" x="0" y="0" width="196" height="189" filterUnits="userSpaceOnUse">
+      <feOffset dy="8" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="22.5" result="blur"/>
+      <feFlood flood-opacity="0.439"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="assets_logo_medium" data-name="assets/logo/medium" transform="translate(67.5 59.5)">
+    <path id="iconmonstr-medium-3" d="M24,30.32H6.317A6.317,6.317,0,0,1,0,24V6.317A6.317,6.317,0,0,1,6.317,0H24A6.317,6.317,0,0,1,30.32,6.317V24A6.317,6.317,0,0,1,24,30.32Zm1.225-7.137v-.34L23.653,21.3a.472.472,0,0,1-.179-.454V9.476a.472.472,0,0,1,.179-.454l1.613-1.546v-.34H19.68L15.7,17.07l-4.53-9.934H5.309v.34L7.2,9.749a.787.787,0,0,1,.254.661v8.934a1.028,1.028,0,0,1-.273.887L5.053,22.806v.34h6.021v-.34L8.951,20.231a1.07,1.07,0,0,1-.293-.887V11.618l5.285,11.528h.614L19.1,11.618v9.188c0,.245,0,.293-.16.454L17.3,22.843v.34h7.926Z" transform="translate(15.242 11.647)" fill="#dcdcdc" fill-rule="evenodd"/>
+    <g transform="matrix(1, 0, 0, 1, -67.5, -59.5)" filter="url(#Rectangle_28)">
+      <g id="Rectangle_28-2" data-name="Rectangle 28" transform="translate(67.5 59.5)" fill="none" stroke="#707070" stroke-width="1" opacity="0.6">
+        <rect width="61" height="54" rx="15" stroke="none"/>
+        <rect x="0.5" y="0.5" width="60" height="53" rx="14.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

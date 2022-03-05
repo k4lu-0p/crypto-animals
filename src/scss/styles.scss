@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '../fonts/plex-mono/font.scss';
+@import '../fonts/plex-sans/font.scss';
+@import '../fonts/icons/font.scss';
+
+@layer base {
+    p {
+		@apply leading-relaxed;
+        font-family: theme('fontFamily.mono');
+        color: theme('colors.lightgray');
+    }
+
+    h1, h2  {
+		@apply font-bold uppercase;
+		font-family: theme('fontFamily.sans');
+		color: theme('colors.white');
+    }
+
+	h3, h4, h5, h6 {
+		@apply font-medium;
+		font-family: theme('fontFamily.sans');
+		color: theme('colors.white');
+	}
+
+	h1 { @apply text-7xl; }
+	h2 { @apply text-6xl; }
+	h3 { @apply text-3xl; }
+	h4 { @apply text-xl; }
+}
+
+.button {
+	@apply text-base font-mono font-bold uppercase;
+	@apply px-10 py-3;
+	@apply rounded-2xl;
+	@apply transition-colors;
+	
+	&-filled {
+		@apply bg-white border border-white text-black;
+		@apply hover:bg-lightgray;
+	}
+
+	&-bordered {
+		@apply bg-transparent border border-white text-white;
+		@apply hover:bg-white hover:text-black;
+	}
+}
+
+.transparent-box {
+	@apply p-4 bg-gray-500/20 rounded-lg;
+}
+
+.bg-banner {
+	background-image: url('../img/banner.png');
+}
+
+.bg-game {
+	background-image: url('../img/game.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.bg-pulsed-light-right {
+	background: url('../svg/light.svg');
+	background-size: 180%;
+	background-repeat: no-repeat;
+	background-position: 250px;
+	animation: pulsed-light-right 15s infinite ease-in-out;
+}
+
+.bg-pulsed-light-left {
+	background: url('../svg/light.svg');
+	background-repeat: no-repeat;
+	background-position: -50vw;
+	animation: pulsed-light-left  12s infinite ease-in-out;
+}
+
+@keyframes pulsed-light-left {
+	0%, 100% {
+		background-position: -30vw;
+		background-size: 80%;
+	}
+
+	50% {
+		background-position: -55vw;
+		background-size: 120%;
+
+	}
+}
+
+@keyframes pulsed-light-right {
+	0%, 100% {
+		background-position: 250px;
+		background-size: 180%;
+	}
+
+	50% {
+		background-position: 950px;
+		background-size: 150%;
+	}
+}

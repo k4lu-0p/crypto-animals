@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoAnimals - Official Website</title>
+    <link rel="stylesheet" href="/index.044e704e.css">
+    <script src="/index.59a40e7a.js" defer=""></script>
+</head>
+<body class="bg-black">
+
+    <section class="bg-pulsed-light-right">
+        <!-- Titles -->
+        <h1>Crypto</h1>
+        <h2>Crypto</h2>
+        <h3>Crypto</h3>
+        <h4>Crypto</h4>
+        <h5>Crypto</h5>
+    
+        <!-- Texts -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur quis officia aliquam ut impedit necessitatibus inventore praesentium fugit, veniam, dolorem labore expedita sunt id? Ut minus earum odit accusamus.</p>
+    
+        <!-- Buttons -->
+        <button class="button button-filled">Discover</button>
+        <button class="button button-bordered">Discover</button>
+    
+        <div class="h-56 bg-banner flex justify-center items-center">
+            <p class="transparent-box w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti perspiciatis, accusantium suscipit nostrum veritatis iusto itaque. Laborum ipsum, vel ipsa officiis libero voluptate repellendus, similique qui tempora, ut maiores!
+            </p>
+        </div>
+    </section>
+
+    <!-- // Collect & Help -->
+    <section class="w-full h-screen bg-pulsed-light-right flex justify-center items-center">
+        <div class="container mx-auto grid grid-cols-2 gap-10">
+            <!-- left -->
+            <div class="bg-white rounded-md relative flex justify-center items-center mx-20">
+                <div style="width: 110%; height: 95%;" class="absolute bg-purple-10 w-full flex justify-evenly items-center uppercase rounded-md">
+                    <div class="flex flex-col justify-center items-center space-y-4">
+                        <i class="icon-bookmarks text-white text-6xl"></i>
+                        <h4 class="text-2xl">collect</h4>
+                    </div>
+                    <div class="flex flex-col justify-center items-center space-y-4">
+                        <i class="icon-handshake text-white text-6xl"></i>
+                        <h4 class="text-2xl">help</h4>
+                    </div>
+                    <div class="flex flex-col justify-center items-center space-y-4">
+                        <i class="icon-handshake text-white text-6xl"></i>
+                        <h4 class="text-2xl">help</h4>
+                    </div>
+                    <div class="flex flex-col justify-center items-center space-y-4">
+                        <i class="icon-share text-white text-6xl"></i>
+                        <h4 class="text-2xl">share</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- right -->
+            <div>
+                <h2>Collect & Help</h2>
+                <p class="py-8 pr-32">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed consequat diam. Nulla non magna ante. Duis lobortis molestie nulla, at suscipit nunc dignissim ut. Sed aliquam purus ante, sagittis lacinia quam accumsan et. Fusce at tristique libero, eu pharetra augue. Etiam in arcu ultricies, rutrum turpis vel, commodo justo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- // Accordion Section -->
+    <section class="w-full h-screen bg-pulsed-light-left">
+
+        <div class="flex flex-col justify-center">
+            <div class="container mx-auto">
+                <h2>
+                    <span class="-mr-2">2022</span>
+                    <span class="text-purple-10 text-4xl">ROADMAP</span>
+                </h2>
+        
+                <!-- // Accordion -->
+                <div x-data="missions" class="w-3/5 mx-auto space-y-4">
+                    <template x-for="(mission, index) in missionList">
+                        <div class="bg-gray-500/20 rounded-lg">
+                            <!-- Header -->
+                            <div @click="selected !== index + 1 ? selected = index + 1 : selected = null" class="flex justify-start items-center space-x-8 cursor-pointer">
+                                <div class="bg-purple-10 py-4 px-12 rounded-md">
+                                    <span class="text-white text-3xl font-bold font-sans" x-text="index + 1"></span>
+                                </div>
+        
+                                <h4 x-text="mission.title" class="font-medium py-4 font-white"></h4>
+                            </div>
+                            <!-- Content -->
+                            <div :id="mission.id" class="max-h-0 overflow-hidden transition-all duration-300" :style="selected === index + 1 ? 'max-height: '+ document.getElementById(mission.id).scrollHeight + 'px;' : '' ">
+                                <p x-text="mission.text" class="text-left pb-10 pr-8 pl-36"></p>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- // Game Section -->
+    <section x-data="missions" class="w-full h-screen container mx-auto">
+        <!-- Grid -->
+        <div class="grid grid-cols-2 grid-rows-2 h-full bg-game rounded-lg">
+            <template x-for="(mission, index) in missionList">
+                <!-- Grid cell -->
+                <div class="flex justify-center items-center">
+                    <!-- Mission item -->
+                    <div class="bg-gray-800/90 rounded-lg flex justify-start items-center space-x-10">
+                        <div class="bg-purple-10 py-6 px-10 rounded-md">
+                            <span class="text-white text-5xl font-bold font-sans" x-text="index + 1"></span>
+                        </div>
+                        <h4 x-text="mission.shortName" class="font-medium py-6 pr-20 font-white"></h4>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+
+</body>
+</html>
