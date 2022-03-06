@@ -10,11 +10,15 @@ module.exports = {
         lightgray: '#DEDEDE',
         purple: {
           '10': '#6F4DC2',
+          '20': '#543FAF',
         },
       },
       fontFamily: {
         'sans': ['Plex Sans'],
         'mono': ['Plex Mono'],
+      },
+      lineHeight: {
+        tightness: 1.11,
       }
     },
   },

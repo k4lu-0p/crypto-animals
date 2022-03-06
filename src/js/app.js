@@ -33,6 +33,26 @@ function missions() {
     }
 }
 
+function mobileMenu() {
+    return {
+        open: false,
+        toggle() {
+            this.open = !this.open;
+        },
+        offset() {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: window.scrollY - 50,
+                    behavior: "smooth"
+                });
+            }, 10);
+
+            this.open = false;
+        }
+    }
+}
+
 window.missions = missions;
+window.mobileMenu = mobileMenu;
 
 Alpine.start();

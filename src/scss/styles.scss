@@ -7,7 +7,7 @@
 @import '../fonts/icons/font.scss';
 
 @layer base {
-    p {
+    p, a {
 		@apply leading-relaxed;
         font-family: theme('fontFamily.mono');
         color: theme('colors.lightgray');
@@ -24,12 +24,13 @@
 		font-family: theme('fontFamily.sans');
 		color: theme('colors.white');
 	}
-
-	h1 { @apply text-7xl; }
-	h2 { @apply text-6xl; }
-	h3 { @apply text-3xl; }
-	h4 { @apply text-xl; }
 }
+
+h1 { @apply text-4xl lg:text-7xl; }
+h2 { @apply lg:text-6xl; }
+h3 { @apply lg:text-3xl; }
+h4 { @apply lg:text-xl; }
+
 
 .button {
 	@apply text-base font-mono font-bold uppercase;
@@ -49,7 +50,8 @@
 }
 
 .transparent-box {
-	@apply p-4 bg-gray-500/20 rounded-lg;
+	@apply px-8 py-4 bg-gray-500/20 rounded-xl shadow-2xl;
+	backdrop-filter: blur(9px) brightness(60%);
 }
 
 .bg-banner {
@@ -101,4 +103,11 @@
 		background-position: 950px;
 		background-size: 150%;
 	}
+}
+
+.bg-hero {
+	background:
+		linear-gradient(0deg, rgba(9,12,17,1) 1%, rgba(9,12,17,0.15) 50%, rgba(9,12,17,0) 100%),
+		110% 120px / 47% no-repeat url('../img/hero1.png'),
+		210px / 180% no-repeat url('../svg/light.svg');
 }

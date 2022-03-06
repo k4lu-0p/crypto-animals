@@ -24,24 +24,24 @@ $path: '../fonts/icons/';
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-twitter:before { // too small
+.icon-discord:before {
   content: "\e900";
 }
-.icon-share:before { // ok
+.icon-twitter:before {
   content: "\e901";
 }
-.icon-logo:before { // not works
+.icon-medium:before {
   content: "\e902";
 }
-.icon-handshake:before { // ok
+.icon-share:before {
   content: "\e903";
 }
-.icon-discord .path1:before { // not works
+.icon-handshake:before {
   content: "\e904";
 }
-.icon-discord .path2:before { // not works
+.icon-brand-logo:before {
   content: "\e905";
 }
-.icon-bookmarks:before { // ok
+.icon-bookmarks:before {
   content: "\e906";
 }

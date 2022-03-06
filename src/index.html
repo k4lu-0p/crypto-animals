@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,124 +9,235 @@
     <link rel="stylesheet" href="scss/styles.scss">
     <script type="module" src="js/app.js"></script>
 </head>
+
 <body class="bg-black">
 
-    <section class="bg-pulsed-light-right">
-        <!-- Titles -->
-        <h1>Crypto</h1>
-        <h2>Crypto</h2>
-        <h3>Crypto</h3>
-        <h4>Crypto</h4>
-        <h5>Crypto</h5>
-    
-        <!-- Texts -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur quis officia aliquam ut impedit necessitatibus inventore praesentium fugit, veniam, dolorem labore expedita sunt id? Ut minus earum odit accusamus.</p>
-    
-        <!-- Buttons -->
-        <button class="button button-filled">Discover</button>
-        <button class="button button-bordered">Discover</button>
-    
-        <div class="h-56 bg-banner flex justify-center items-center">
-            <p class="transparent-box w-1/2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti perspiciatis, accusantium suscipit nostrum veritatis iusto itaque. Laborum ipsum, vel ipsa officiis libero voluptate repellendus, similique qui tempora, ut maiores!
-            </p>
-        </div>
-    </section>
+    <header x-data="mobileMenu()">
 
-    <!-- // Collect & Help -->
-    <section class="w-full h-screen bg-pulsed-light-right flex justify-center items-center">
-        <div class="container mx-auto grid grid-cols-2 gap-10">
-            <!-- left -->
-            <div class="bg-white rounded-md relative flex justify-center items-center mx-20">
-                <div style="width: 110%; height: 95%;" class="absolute bg-purple-10 w-full flex justify-evenly items-center uppercase rounded-md">
-                    <div class="flex flex-col justify-center items-center space-y-4">
-                        <i class="icon-bookmarks text-white text-6xl"></i>
-                        <h4 class="text-2xl">collect</h4>
+        <nav class="w-screen fixed py-3 px-4 lg:px-0 bg-black lg:bg-transparent z-40">
+            <div class="container mx-auto">
+                <div class="md:mx-auto md:flex md:items-center md:justify-between">
+    
+                    <div class="flex justify-between items-center">
+                        <a class="flex justify-center items-center h-full" href="#">
+                            <!-- <i class="icon-logo text-2xl text-white"></i> -->
+                            <img class="h-10" src="./svg/brand-logo.svg" alt="Official CryptoAnimals brand logo">
+                        </a>
+                        <div class="inline-block cursor-pointer md:hidden" @click="toggle">
+                            <div class="bg-gray-400 w-8 mb-2" style="height: 2px;"></div>
+                            <div class="bg-gray-400 w-8 mb-2" style="height: 2px;"></div>
+                            <div class="bg-gray-400 w-8" style="height: 2px;"></div>
+                        </div>
                     </div>
-                    <div class="flex flex-col justify-center items-center space-y-4">
-                        <i class="icon-handshake text-white text-6xl"></i>
-                        <h4 class="text-2xl">help</h4>
-                    </div>
-                    <div class="flex flex-col justify-center items-center space-y-4">
-                        <i class="icon-handshake text-white text-6xl"></i>
-                        <h4 class="text-2xl">help</h4>
-                    </div>
-                    <div class="flex flex-col justify-center items-center space-y-4">
-                        <i class="icon-share text-white text-6xl"></i>
-                        <h4 class="text-2xl">share</h4>
-                    </div>
+    
+                    <ul class="hidden lg:flex items-center space-x-14">
+                        <li>
+                            <a class="text-lg w-5 uppercase font-light" href="#" target="_blank" rel="noopener noreferrer">discover</a>
+                        </li>
+                        <li>
+                            <a class="text-lg w-3 uppercase font-light" href="#" target="_blank" rel="noopener noreferrer">about us</a>
+                        </li>
+                        <li>
+                            <a class="text-lg w-5 uppercase font-light" href="#" target="_blank" rel="noopener noreferrer">road map</a>
+                        </li>
+                        <li>
+                            <button class="button button-filled">join the community</button>
+                        </li>
+                    </ul>
+    
                 </div>
             </div>
-            <!-- right -->
-            <div>
-                <h2>Collect & Help</h2>
-                <p class="py-8 pr-32">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed consequat diam. Nulla non magna ante. Duis lobortis molestie nulla, at suscipit nunc dignissim ut. Sed aliquam purus ante, sagittis lacinia quam accumsan et. Fusce at tristique libero, eu pharetra augue. Etiam in arcu ultricies, rutrum turpis vel, commodo justo.
+        </nav>
+
+        <nav 
+            class="fixed block md:hidden bg-black-1 h-screen w-screen z-20 bg-black" 
+            x-show="open"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform scale-100"
+            x-transition:leave-end="opacity-0 transform scale-90"
+        >
+            <ul class="pt-40 px-10">
+                <li>
+                    <a x-on:click="offset()" class="inline-block py-1 md:py-4 text-gray-100 mr-6 font-bold text-2xl pb-4 uppercase" href="#hero-section">Project</a>
+                </li>
+                <li>
+                    <a x-on:click="offset()" class="inline-block py-1 md:py-4 text-gray-100 mr-6 text-2xl pb-4 uppercase" href="#strategies-section">About</a>
+                </li>
+                <li>
+                    <a x-on:click="offset()" class="inline-block py-1 md:py-4 text-gray-100 mr-6 text-2xl pb-4 uppercase" href="#agency-section">Contact</a>
+                </li>
+            </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="h-screen py-20 lg:py-28 bg-hero">
+
+            <div class="min-h-full container mx-auto flex flex-col lg:flex-row">
+
+                <div class="lg:w-1/2 flex flex-col justify-between">
+
+                    <div>
+                        <small class="text-gray-500 text-sm md:text-lg">COLLECT & HELP</small>
+    
+                        <h1 class="leading-tightness pb-4 md:pb-12">
+                            <span>discover the</span>
+                            <span class="text-purple-20">cryptoanimals</span>
+                            <span>10,000 nfs to change the world</span>
+                        </h1>
+    
+                        <div class="px-2 space-y-4 md:space-y-0 md:space-x-6 pb-4 lg:pb-12">
+                            <button class="button button-filled w-full md:w-auto">Discover</button>
+                            <button class="button button-bordered w-full md:w-auto">join the community</button>
+                        </div>
+                    </div>
+                    
+                    <div class="px-2">
+                        <p class="transparent-box w-full">
+                            CryptoAnimals is an NFT project aiming to actively contribute to charitable actions for animal welfare. Collect them, breed them, and create new generations of NFTs
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 flex flex-col items-center lg:justify-end lg:items-end">
+                    <div class="flex flex-col items-center">
+                        <p class="font-sans font-light pb-2">Join our community & movement</p>
+                        <div class="transparent-box flex items-center justify-between ml-auto space-x-5">
+                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-discord text-2xl text-white"></i></a>
+                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-twitter text-2xl text-white"></i></a>
+                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-medium text-2xl text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- temp -->
+        <!-- <section class="bg-pulsed-light-right">
+            <h1>Crypto</h1>
+            <h2>Crypto</h2>
+            <h3>Crypto</h3>
+            <h4>Crypto</h4>
+            <h5>Crypto</h5>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tenetur quis officia aliquam ut
+                impedit necessitatibus inventore praesentium fugit, veniam, dolorem labore expedita sunt id? Ut minus
+                earum odit accusamus.</p>
+
+            <button class="button button-filled">Discover</button>
+            <button class="button button-bordered">Discover</button>
+
+            <div class="h-56 bg-banner flex justify-center items-center">
+                <p class="transparent-box w-1/2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia deleniti perspiciatis, accusantium
+                    suscipit nostrum veritatis iusto itaque. Laborum ipsum, vel ipsa officiis libero voluptate
+                    repellendus, similique qui tempora, ut maiores!
                 </p>
             </div>
-        </div>
-    </section>
+        </section> -->
 
-    <!-- // Accordion Section -->
-    <section class="w-full h-screen bg-pulsed-light-left">
-
-        <div class="flex flex-col justify-center">
-            <div class="container mx-auto">
-                <h2>
-                    <span class="-mr-2">2022</span>
-                    <span class="text-purple-10 text-4xl">ROADMAP</span>
-                </h2>
-        
-                <!-- // Accordion -->
-                <div x-data="missions" class="w-3/5 mx-auto space-y-4">
-                    <template x-for="(mission, index) in missionList">
-                        <div class="bg-gray-500/20 rounded-lg">
-                            <!-- Header -->
-                            <div 
-                                @click="selected !== index + 1 ? selected = index + 1 : selected = null" 
-                                class="flex justify-start items-center space-x-8 cursor-pointer"
-                            >
-                                <div class="bg-purple-10 py-4 px-12 rounded-md">
-                                    <span class="text-white text-3xl font-bold font-sans" x-text="index + 1"></span>
-                                </div>
-        
-                                <h4 x-text="mission.title" class="font-medium py-4 font-white"></h4>
-                            </div>
-                            <!-- Content -->
-                            <div 
-                                :id="mission.id"
-                                class="max-h-0 overflow-hidden transition-all duration-300" 
-                                :style="selected === index + 1 ? 'max-height: '+ document.getElementById(mission.id).scrollHeight + 'px;' : '' "
-                            >
-                                <p x-text="mission.text" class="text-left pb-10 pr-8 pl-36"></p>
-                            </div>
+        <!-- // Collect & Help -->
+        <section class="hidden w-full h-screen lg:flex justify-center items-center">
+            <div class="container mx-auto grid lg:grid-cols-2 gap-10">
+                <!-- left -->
+                <div class="bg-white rounded-md relative flex justify-center items-center mx-20">
+                    <div style="width: 110%; height: 95%;"
+                        class="absolute bg-purple-10 w-full flex justify-evenly items-center uppercase rounded-md">
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <i class="icon-bookmarks text-white text-6xl"></i>
+                            <h4 class="text-2xl">collect</h4>
                         </div>
-                    </template>
-                </div>
-            </div>
-        </div>
-
-
-    </section>
-
-    <!-- // Game Section -->
-    <section x-data="missions" class="w-full h-screen container mx-auto">
-        <!-- Grid -->
-        <div class="grid grid-cols-2 grid-rows-2 h-full bg-game rounded-lg">
-            <template x-for="(mission, index) in missionList">
-                <!-- Grid cell -->
-                <div class="flex justify-center items-center">
-                    <!-- Mission item -->
-                    <div class="bg-gray-800/90 rounded-lg flex justify-start items-center space-x-10">
-                        <div class="bg-purple-10 py-6 px-10 rounded-md">
-                            <span class="text-white text-5xl font-bold font-sans" x-text="index + 1"></span>
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <i class="icon-handshake text-white text-6xl"></i>
+                            <h4 class="text-2xl">help</h4>
                         </div>
-                        <h4 x-text="mission.shortName" class="font-medium py-6 pr-20 font-white"></h4>
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <i class="icon-handshake text-white text-6xl"></i>
+                            <h4 class="text-2xl">help</h4>
+                        </div>
+                        <div class="flex flex-col justify-center items-center space-y-4">
+                            <i class="icon-share text-white text-6xl"></i>
+                            <h4 class="text-2xl">share</h4>
+                        </div>
                     </div>
                 </div>
-            </template>
-        </div>
-    </section>
+                <!-- right -->
+                <div>
+                    <h2>Collect & Help</h2>
+                    <p class="py-8 pr-32">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed consequat diam. Nulla non magna
+                        ante. Duis lobortis molestie nulla, at suscipit nunc dignissim ut. Sed aliquam purus ante,
+                        sagittis lacinia quam accumsan et. Fusce at tristique libero, eu pharetra augue. Etiam in arcu
+                        ultricies, rutrum turpis vel, commodo justo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- // Accordion Section -->
+        <section class="hidden lg:block w-full h-screen bg-pulsed-light-left">
+
+            <div class="flex flex-col justify-center">
+                <div class="container mx-auto">
+                    <h2>
+                        <span class="-mr-2">2022</span>
+                        <span class="text-purple-10 text-4xl">ROADMAP</span>
+                    </h2>
+
+                    <!-- // Accordion -->
+                    <div x-data="missions" class="w-3/5 mx-auto space-y-4">
+                        <template x-for="(mission, index) in missionList">
+                            <div class="bg-gray-500/20 rounded-lg">
+                                <!-- Header -->
+                                <div @click="selected !== index + 1 ? selected = index + 1 : selected = null"
+                                    class="flex justify-start items-center space-x-8 cursor-pointer">
+                                    <div class="bg-purple-10 py-4 px-12 rounded-md">
+                                        <span class="text-white text-3xl font-bold font-sans" x-text="index + 1"></span>
+                                    </div>
+
+                                    <h4 x-text="mission.title" class="font-medium py-4 font-white"></h4>
+                                </div>
+                                <!-- Content -->
+                                <div :id="mission.id" class="max-h-0 overflow-hidden transition-all duration-300"
+                                    :style="selected === index + 1 ? 'max-height: '+ document.getElementById(mission.id).scrollHeight + 'px;' : '' ">
+                                    <p x-text="mission.text" class="text-left pb-10 pr-8 pl-36"></p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- // Game Section -->
+        <section x-data="missions" class="hidden lg:block w-full h-screen container mx-auto">
+            <!-- Grid -->
+            <div class="grid lg:grid-cols-2 grid-rows-2 h-full bg-game rounded-lg">
+                <template x-for="(mission, index) in missionList">
+                    <!-- Grid cell -->
+                    <div class="flex justify-center items-center">
+                        <!-- Mission item -->
+                        <div class="bg-gray-800/90 rounded-lg flex justify-start items-center space-x-10">
+                            <div class="bg-purple-10 py-6 px-10 rounded-md">
+                                <span class="text-white text-5xl font-bold font-sans" x-text="index + 1"></span>
+                            </div>
+                            <h4 x-text="mission.shortName" class="font-medium py-6 pr-20 font-white"></h4>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+    </main>
+
 
 </body>
+
 </html>
