@@ -19,6 +19,12 @@ module.exports = {
       },
       lineHeight: {
         tightness: 1.11,
+      },
+      spacing: {
+        '98': '26rem',
+        '100': '28rem',
+        '102': '30rem',
+        '104': '32rem',
       }
     },
   },

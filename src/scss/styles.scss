@@ -8,7 +8,7 @@
 
 @layer base {
     p, a {
-		@apply leading-relaxed;
+		@apply leading-8;
         font-family: theme('fontFamily.mono');
         color: theme('colors.lightgray');
     }
@@ -27,7 +27,7 @@
 }
 
 h1 { @apply text-4xl lg:text-7xl; }
-h2 { @apply lg:text-6xl; }
+h2 { @apply text-3xl lg:text-6xl; }
 h3 { @apply lg:text-3xl; }
 h4 { @apply lg:text-xl; }
 

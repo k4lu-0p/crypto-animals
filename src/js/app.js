@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs'
+import images from '../img/animals/*.png';
 
 window.Alpine = Alpine;
 
@@ -52,7 +53,42 @@ function mobileMenu() {
     }
 }
 
+function showcaseSlider() {
+    return {
+        hasVisibleImage: true,
+        animals: [
+            { name: 'bear', image: images.bear },
+            { name: 'cat', image: images.cat },
+            { name: 'lama', image: images.lama },
+            { name: 'panda', image: images.panda },
+            { name: 'penguin', image: images.penguin },
+            { name: 'shark', image: images.shark },
+            { name: 'turtle', image: images.turtle },
+        ],
+        current: 0,
+        next(cb) { 
+            this.hasVisibleImage = false;
+            this.current < this.animals.length - 1 
+                ? this.current++ 
+                : this.current = 0; 
+            cb(() => {
+                this.hasVisibleImage = true;
+            });
+        },
+        previous(cb) { 
+            this.hasVisibleImage = false;
+            this.current > 0 
+                ? this.current-- 
+                : this.current = this.animals.length - 1;
+            cb(() => {
+                this.hasVisibleImage = true;
+            });
+        },
+    }
+}
+
 window.missions = missions;
 window.mobileMenu = mobileMenu;
+window.showcaseSlider = showcaseSlider;
 
 Alpine.start();
