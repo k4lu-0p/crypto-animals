@@ -1,6 +1,7 @@
 import Alpine from 'alpinejs'
 import animalImages from '../img/animals/*.png';
 import memberImages from '../img/members/*.png';
+import partnerImages from '../img/partners/*.png';
 
 window.Alpine = Alpine;
 
@@ -107,9 +108,21 @@ function teamGrid() {
     }
 }
 
+function partnersGrid() {
+    return {
+        partners: [
+            { name: 'Partner 1', role: 'Role 1', image: partnerImages.hugo },
+            { name: 'Partner 1', role: 'Role 1', image: partnerImages.hugo },
+            { name: 'Partner 1', role: 'Role 1', image: partnerImages.hugo },
+            { name: 'Partner 1', role: 'Role 1', image: partnerImages.hugo },
+        ]
+    }
+}
+
 window.missions = missions;
 window.mobileMenu = mobileMenu;
 window.showcaseSlider = showcaseSlider;
 window.teamGrid = teamGrid;
+window.partnersGrid = partnersGrid;
 
 Alpine.start();
