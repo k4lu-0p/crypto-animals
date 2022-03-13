@@ -99,19 +99,19 @@
 
                 <div class="lg:w-1/2 flex flex-col items-center lg:justify-end lg:items-end">
                     <div class="flex flex-col items-center">
-                        <p class="font-sans font-light pb-2 pt-2 lg:pt-0">Join our community & movement</p>
+                        <p class="font-sans font-light pb-2 pt-2 lg:pt-0 text-lg">Join our community & movement</p>
                         <div class="transparent-box flex items-center justify-between ml-auto space-x-5">
-                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-discord text-2xl text-white"></i></a>
-                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-twitter text-2xl text-white"></i></a>
-                            <a href="#" class="h-12 w-12 border border-gray-500 rounded-xl p-2 flex justify-center items-center"><i class="icon-medium text-2xl text-white"></i></a>
-                        </div>
+                            <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-discord text-3xl text-white"></i></a>
+                            <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-twitter text-3xl text-white"></i></a>
+                            <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-medium text-3xl text-white"></i></a>
+                    </div>
                     </div>
                 </div>
             </div>
         </section>
         
         <!-- Showcase -->
-        <section class="pb-10 lg:pb-0">
+        <section class="pb-10">
             <div class="min-h-screen container mx-auto flex flex-col lg:flex-row justify-between items-center lg:space-x-10">
                 <div class="px-2 lg:px-0 w-full lg:w-1/2 flex flex-col items-center lg:items-start space-y-10">
                     <h2 class="text-center lg:text-left">collection showcase</h2>
@@ -162,7 +162,7 @@
         </section>
 
         <!-- // Collect & Help -->
-        <section class="lg:min-h-screen w-full lg:flex justify-center items-center">
+        <section class="w-full lg:flex justify-center items-center lg:pb-64">
             <div class="px-2 lg:px-0 container mx-auto lg:grid lg:grid-cols-2 gap-10">
                 <!-- left -->
                 <div class="hidden lg:flex bg-white rounded-md relative justify-center items-center mx-12">
@@ -199,7 +199,7 @@
         </section>
 
         <!-- // Accordion Section -->
-        <section class="pb-12 lg:pb-0 lg:min-h-screen w-full bg-pulsed-light-left flex items-start justify-center">
+        <section class="pb-12 lg:pb-0 lg:min-h-screen w-full flex items-start justify-center">
 
             <div class="flex flex-col justify-center">
                 <div class="container mx-auto">
@@ -209,7 +209,7 @@
                     </h2>
 
                     <!-- // Accordion -->
-                    <div x-data="missions" class="w-11/12 lg:w-4/5 mx-auto space-y-4">
+                    <div x-data="missions" x-init="init" class="w-11/12 lg:w-4/5 mx-auto space-y-4">
                         <template x-for="(mission, index) in missionList">
                             <div class="bg-gray-500/20 rounded-lg">
                                 <!-- Header -->
@@ -274,8 +274,8 @@
         </section>
 
          <!-- // Partners & sponsors -->
-         <section x-data="partnersGrid" class="lg:py-52 min-h-screen container mx-auto">
-            <h2 class="pb-7 text-center lg:text-left">partners & sponsors</h2>
+         <section x-data="partnersGrid" class="pb-24 container mx-auto">
+            <h2 class="pb-7 pt-7 lg:pt-0 text-center lg:text-left">partners & sponsors</h2>
             <p class="lg:w-1/3 pb-16 mx-2 lg:mx-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed consequat diam.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
                 <template x-for="partner in partners">
@@ -290,6 +290,37 @@
                 </template>
             </div>
         </section>
+
+        <!-- // Video section -->
+        <section class="hidden lg:flex container mx-auto justify-center items-center py-42">
+            <img src="./img/banner.png" alt="">
+        </section>
+
+        <footer>
+            <div class="container mx-auto lg:border-t border-gray-500 lg:py-10">
+                <div class="grid lg:grid-cols-2 grid-cols-1 lg:pt-24 pb-10">
+                    <div class="px-2 lg:px-0">
+                        <p class="transparent-box w-full">
+                            CryptoAnimals is an NFT project aiming to actively contribute to charitable actions for animal welfare. Collect them, breed them, and create new generations of NFTs
+                        </p>
+                    </div>
+                    <div class="flex justify-center lg:justify-end">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-sans font-light pb-4 pt-2 lg:pt-0">Join the movement</h3>
+                            <div class="flex items-center justify-between space-x-5">
+                                <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-discord text-3xl text-white"></i></a>
+                                <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-twitter text-3xl text-white"></i></a>
+                                <a href="#" class="h-14 w-16 border border-gray-500 rounded-2xl p-2 flex justify-center items-center"><i class="icon-medium text-3xl text-white"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row pt-10">
+                    <p class="font-sans w-full lg:w-1/3 font-light text-center lg:text-left">Created by <span class="font-bold">HumanLab Studio</span></p>
+                    <p class="font-sans w-full lg:w-1/3 text-center font-light">Conditions générales</p>
+                </div>
+            </div>
+        </footer>
 
     </main>
 

@@ -33,6 +33,9 @@ function missions() {
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed consequat diam. Nulla non magna ante. Duis lobortis molestie nulla, at suscipit nunc dignissim ut. Sed aliquam purus ante, sagittis lacinia quam accumsan et. Fusce at tristique libero, eu pharetra augue. Etiam in arcu ultricies, rutrum turpis vel, commodo justo. Phasellus aliquam sed libero sed venenatis. Sed varius ligula ut nisi porttitor pellentesque. Donec ac massa velit. Quisque posuere dui ut leo aliquet tristique. Curabitur imperdiet metus nisi, vel auctor ex maximus quis. Nulla vel lectus nisl.'
             },
         ],
+        init() {
+            setTimeout(() => this.selected = 1, 500);
+        }
     }
 }
 
