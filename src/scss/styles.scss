@@ -61,7 +61,7 @@ h4 { @apply lg:text-xl; }
 .bg-game {
 	background-image: url('../img/game.png');
 	background-position: center;
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 

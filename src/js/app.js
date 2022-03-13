@@ -1,5 +1,6 @@
 import Alpine from 'alpinejs'
-import images from '../img/animals/*.png';
+import animalImages from '../img/animals/*.png';
+import memberImages from '../img/members/*.png';
 
 window.Alpine = Alpine;
 
@@ -57,13 +58,13 @@ function showcaseSlider() {
     return {
         hasVisibleImage: true,
         animals: [
-            { name: 'bear', image: images.bear },
-            { name: 'cat', image: images.cat },
-            { name: 'lama', image: images.lama },
-            { name: 'panda', image: images.panda },
-            { name: 'penguin', image: images.penguin },
-            { name: 'shark', image: images.shark },
-            { name: 'turtle', image: images.turtle },
+            { name: 'bear', image: animalImages.bear },
+            { name: 'cat', image: animalImages.cat },
+            { name: 'lama', image: animalImages.lama },
+            { name: 'panda', image: animalImages.panda },
+            { name: 'penguin', image: animalImages.penguin },
+            { name: 'shark', image: animalImages.shark },
+            { name: 'turtle', image: animalImages.turtle },
         ],
         current: 0,
         next(cb) { 
@@ -87,8 +88,28 @@ function showcaseSlider() {
     }
 }
 
+function teamGrid() {
+    return {
+        members: [
+            { name: 'Hugo Custodio', job: 'CEO Founder 1', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 2', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 3', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 4', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 5', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 6', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 7', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 8', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 9', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 10', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 11', image: memberImages.hugo},
+            { name: 'Hugo Custodio', job: 'CEO Founder 12', image: memberImages.hugo},
+        ]
+    }
+}
+
 window.missions = missions;
 window.mobileMenu = mobileMenu;
 window.showcaseSlider = showcaseSlider;
+window.teamGrid = teamGrid;
 
 Alpine.start();
