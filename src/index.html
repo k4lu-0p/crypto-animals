@@ -75,7 +75,7 @@
 
     <main>
         <!-- Hero -->
-        <section class="min-h-screen pt-20 pb-10 lg:pt-28 lg:pb-28 bg-hero">
+        <section class="min-h-screen lg:h-screen pt-20 pb-10 lg:pt-28 lg:pb-28 bg-hero">
             <div class="min-h-full container mx-auto flex flex-col lg:flex-row">
                 <div class="px-2 lg:px-0 lg:w-1/2 flex flex-col justify-between">
                     <div>
@@ -162,7 +162,7 @@
         </section>
 
         <!-- // Collect & Help -->
-        <section class="min-h-screen w-full lg:flex justify-center items-center">
+        <section class="lg:min-h-screen w-full lg:flex justify-center items-center">
             <div class="px-2 lg:px-0 container mx-auto lg:grid lg:grid-cols-2 gap-10">
                 <!-- left -->
                 <div class="hidden lg:flex bg-white rounded-md relative justify-center items-center mx-12">
@@ -199,32 +199,33 @@
         </section>
 
         <!-- // Accordion Section -->
-        <section class="min-h-screen hidden w-full bg-pulsed-light-left">
+        <section class="min-h-screen w-full bg-pulsed-light-left flex items-start justify-center">
 
             <div class="flex flex-col justify-center">
                 <div class="container mx-auto">
-                    <h2>
-                        <span class="-mr-2">2022</span>
-                        <span class="text-purple-10 text-4xl">ROADMAP</span>
+                    <h2 class="pb-8 lg:pb-16 text-center lg:text-left">
+                        <span class="lg:-mr-2 lg:text-9xl">2022</span>
+                        <span class="text-purple-10">ROADMAP</span>
                     </h2>
 
                     <!-- // Accordion -->
-                    <div x-data="missions" class="w-3/5 mx-auto space-y-4">
+                    <div x-data="missions" class="w-11/12 lg:w-4/5 mx-auto space-y-4">
                         <template x-for="(mission, index) in missionList">
                             <div class="bg-gray-500/20 rounded-lg">
                                 <!-- Header -->
                                 <div @click="selected !== index + 1 ? selected = index + 1 : selected = null"
-                                    class="flex justify-start items-center space-x-8 cursor-pointer">
-                                    <div class="bg-purple-10 py-4 px-12 rounded-md">
-                                        <span class="text-white text-3xl font-bold font-sans" x-text="index + 1"></span>
+                                    class="flex justify-start items-center space-x-14 cursor-pointer">
+                                    <div class="bg-purple-10 py-4 px-8 lg:px-12 rounded-md">
+                                        <span class="text-white lg:text-3xl font-bold font-sans" x-text="index + 1"></span>
                                     </div>
 
-                                    <h4 x-text="mission.title" class="font-medium py-4 font-white"></h4>
+                                    <h4 x-text="mission.title" class="hidden lg:block font-medium py-4 font-white"></h4>
+                                    <h4 x-text="mission.shortName" class="lg:hidden block font-medium py-4 font-white"></h4>
                                 </div>
                                 <!-- Content -->
                                 <div :id="mission.id" class="max-h-0 overflow-hidden transition-all duration-300"
                                     :style="selected === index + 1 ? 'max-height: '+ document.getElementById(mission.id).scrollHeight + 'px;' : '' ">
-                                    <p x-text="mission.text" class="text-left pb-10 pr-8 pl-36"></p>
+                                    <p x-text="mission.text" class="text-left lg:pb-10 lg:pr-8 lg:pl-42 pl-2"></p>
                                 </div>
                             </div>
                         </template>
