@@ -65,6 +65,10 @@ h4 { @apply lg:text-xl; }
 	background-repeat: no-repeat;
 }
 
+.bg-gradient {
+	background: linear-gradient(152deg, rgba(84,63,175,1) 6%, rgba(107,52,144,1) 28%, rgba(42,32,88,1) 100%);
+}
+
 .bg-pulsed-light-right {
 	background: url('../svg/light.svg');
 	background-size: 180%;

@@ -134,7 +134,7 @@
                 <div class="px-2 lg:px-0 w-full lg:w-1/2 flex items-center justify-center xl:justify-end 2xl:justify-center pt-20">
 
                     <div x-data="showcaseSlider" class="flex flex-col text-white lg:w-8/12 w-full h-auto">
-                        <div class="h-56 lg:h-80 bg-purple-10 rounded-tl-lg rounded-tr-lg relative">
+                        <div class="h-56 lg:h-80 bg-gradient rounded-tl-lg rounded-tr-lg relative">
                             <img
                                 x-show="hasVisibleImage"
                                 x-transition:enter="transition ease-out duration-500"
@@ -148,7 +148,7 @@
                                 alt="animals[current].name"
                             >
                         </div>
-                        <div class="w-full bg-purple-20 py-4 px-5 rounded-bl-lg rounded-br-lg">
+                        <div class="w-full bg-purple-30 py-4 px-5 rounded-bl-lg rounded-br-lg">
                             <span class="uppercase font-medium text-xl" x-text="animals[current].name"></span>
                         </div>
                         <div class="flex justify-center space-x-14 text-xl pt-8">
@@ -166,7 +166,7 @@
             <div class="px-2 lg:px-0 container mx-auto lg:grid lg:grid-cols-2 gap-10">
                 <!-- left -->
                 <div class="hidden lg:flex bg-white rounded-md relative justify-center items-center mx-12">
-                    <div style="width: 110%; height: 95%;" class="absolute bg-purple-10 flex justify-evenly items-center uppercase rounded-md">
+                    <div style="width: 110%; height: 95%;" class="absolute bg-gradient flex justify-evenly items-center uppercase rounded-md">
                         <div class="flex flex-col justify-center items-center space-y-4">
                             <i class="icon-bookmarks text-white md:text-6xl"></i>
                             <h4 class="text-2xl">collect</h4>
@@ -215,7 +215,7 @@
                                 <!-- Header -->
                                 <div @click="selected !== index + 1 ? selected = index + 1 : selected = null"
                                     class="flex justify-start items-center space-x-14 cursor-pointer">
-                                    <div class="bg-purple-10 py-4 px-8 lg:px-12 rounded-md">
+                                    <div class="bg-gradient py-4 px-8 lg:px-12 rounded-md">
                                         <span class="text-white lg:text-3xl font-bold font-sans" x-text="index + 1"></span>
                                     </div>
 
@@ -245,7 +245,7 @@
                     <div class="flex justify-center items-center">
                         <!-- Mission item -->
                         <div class="bg-gray-800/90 rounded-lg flex justify-start items-center space-x-10">
-                            <div class="bg-purple-10 py-6 px-10 rounded-md">
+                            <div class="bg-gradient py-6 px-10 rounded-md">
                                 <span class="text-white text-5xl font-bold font-sans" x-text="index + 1"></span>
                             </div>
                             <h4 x-text="mission.shortName" class="font-medium py-6 pr-20 font-white"></h4>
@@ -262,9 +262,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
                 <template x-for="member in members">
                     <!-- team card -->
-                    <div class="bg-purple-10 rounded-lg relative h-72 mx-2 lg:mx-0">
+                    <div class="bg-gradient rounded-lg relative h-72 mx-2 lg:mx-0">
                         <img :src="member.image" class="bottom-12 absolute" alt="">
-                        <p class="px-6 py-4 bg-purple-20 font-sans rounded-bl-md rounded-br-lg absolute left-0 right-0 bottom-0">
+                        <p class="px-6 py-4 bg-purple-30 font-sans rounded-bl-md rounded-br-lg absolute left-0 right-0 bottom-0">
                             <span class="font-light pr-3" x-text="member.name"></span>
                             <span class="font-bold" x-text="member.job"></span>
                         </p>
@@ -280,9 +280,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-9">
                 <template x-for="partner in partners">
                     <!-- team card -->
-                    <div class="bg-purple-10 rounded-lg relative h-72 mx-2 lg:mx-0">
+                    <div class="bg-gradient rounded-lg relative h-72 mx-2 lg:mx-0">
                         <img :src="partner.image" class="bottom-12 absolute" alt="">
-                        <p class="px-6 py-4 bg-purple-20 font-sans rounded-bl-md rounded-br-lg absolute left-0 right-0 bottom-0">
+                        <p class="px-6 py-4 bg-purple-30 font-sans rounded-bl-md rounded-br-lg absolute left-0 right-0 bottom-0">
                             <span class="font-light pr-3" x-text="partner.name"></span>
                             <span class="font-bold" x-text="partner.role"></span>
                         </p>

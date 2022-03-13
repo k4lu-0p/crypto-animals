@@ -11,6 +11,7 @@ module.exports = {
         purple: {
           '10': '#6F4DC2',
           '20': '#543FAF',
+          '30': '#5D379B',
         },
       },
       fontFamily: {
