@@ -84,6 +84,13 @@ h4 { @apply lg:text-xl; }
 	animation: pulsed-light-left  12s infinite ease-in-out;
 }
 
+.bg-hero {
+	background:
+		linear-gradient(0deg, rgba(9,12,17,1) 1%, rgba(9,12,17,0.15) 50%, rgba(9,12,17,0) 100%),
+		110% 120px / 47% no-repeat url('../img/hero1.png'),
+		210px / 180% no-repeat url('../svg/light.svg');
+}
+
 @keyframes pulsed-light-left {
 	0%, 100% {
 		background-position: -30vw;
@@ -109,9 +116,37 @@ h4 { @apply lg:text-xl; }
 	}
 }
 
-.bg-hero {
-	background:
-		linear-gradient(0deg, rgba(9,12,17,1) 1%, rgba(9,12,17,0.15) 50%, rgba(9,12,17,0) 100%),
-		110% 120px / 47% no-repeat url('../img/hero1.png'),
-		210px / 180% no-repeat url('../svg/light.svg');
+#showcase-section {
+	// lg
+	@media (min-width: 1024px) {
+		background: -100px 24% / 40% no-repeat url('../svg/title-decoration.svg');
+	}
+}
+
+#collect-help-section {
+	// lg
+	@media (min-width: 1024px) {
+		background: 106% top / 40% no-repeat url('../svg/title-decoration.svg');
+	}
+}
+
+#accordion-section {
+	// lg
+	@media (min-width: 1024px) {
+		background: -100px 3% / 40% no-repeat url('../svg/title-decoration.svg');
+	}
+}
+
+#team-section {
+	// lg
+	@media (min-width: 1024px) {
+		background: -100px 13% / 40% no-repeat url('../svg/title-decoration.svg');
+	}
+}
+
+#partners-sponsors-section {
+	// lg
+	@media (min-width: 1024px) {
+		background: -100px 0% / 40% no-repeat url('../svg/title-decoration.svg');
+	}
 }
