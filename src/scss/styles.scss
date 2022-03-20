@@ -31,6 +31,17 @@ h2 { @apply text-3xl lg:text-6xl; }
 h3 { @apply lg:text-3xl; }
 h4 { @apply lg:text-xl; }
 
+body {
+	// lg
+	@media (min-width: 1024px) {
+		background:
+			-85% 23% / 144% no-repeat url('../svg/light.svg'),
+			-60vw 40% / 104% no-repeat url('../svg/light.svg'),
+			-80vw 112% / 144% no-repeat url('../svg/light.svg'),
+			linear-gradient(0deg, #090C11 1%, #090C11 100%);
+	}
+}
+
 
 .button {
 	@apply text-base font-mono font-bold uppercase;
