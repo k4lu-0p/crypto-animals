@@ -179,7 +179,7 @@ function teamGrid() {
   return {
     members: [
       { name: "Hugo Custodio", job: "CEO", image: memberImages.hugo },
-      { name: "Edouard Le Pelletier", job: "Business Dev", image: memberImages.edouard },
+      { name: "Edouard Lepelletier", job: "Business Dev", image: memberImages.edouard },
       { name: "Timoté Garcia", job: "CMO", image: memberImages.timote },
       { name: "Antoine Andrieux", job: "Blockchain Developer", image: memberImages.antoine },
       { name: "Bianca Dionaldo", job: "Community Manager", image: memberImages.bianca },
