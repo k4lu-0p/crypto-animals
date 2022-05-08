@@ -1,0 +1,67 @@
+@keyframes pulsed-light-left {
+	0%, 100% {
+		background-position: -30vw;
+		background-size: 80%;
+	}
+
+	50% {
+		background-position: -55vw;
+		background-size: 120%;
+
+	}
+}
+
+@keyframes pulsed-light-right {
+	0%, 100% {
+		background-position: 250px;
+		background-size: 180%;
+	}
+
+	50% {
+		background-position: 950px;
+		background-size: 150%;
+	}
+}
+
+.bg-banner {
+	background-image: url('../img/banner.png');
+}
+
+.bg-game {
+	background-image: url('../img/game.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bg-gradient {
+	background: linear-gradient(152deg, rgba(84,63,175,1) 6%, rgba(107,52,144,1) 28%, rgba(42,32,88,1) 100%);
+}
+
+.bg-pulsed-light-right {
+	background: url('../svg/light.svg');
+	background-size: 180%;
+	background-repeat: no-repeat;
+	background-position: 250px;
+	animation: pulsed-light-right 15s infinite ease-in-out;
+}
+
+.bg-pulsed-light-left {
+	background: url('../svg/light.svg');
+	background-repeat: no-repeat;
+	background-position: -50vw;
+	animation: pulsed-light-left  12s infinite ease-in-out;
+}
+
+.bg-hero {
+	background:
+		linear-gradient(0deg, rgba(9,12,17,1) 1%, rgba(9,12,17,0.15) 50%, rgba(9,12,17,0) 100%),
+		center / cover no-repeat url('../img/hero2.png');
+}
+
+.bg-hero-middle {
+  background:
+		linear-gradient(180deg, rgba(9,12,17,1) 1%, rgba(9,12,17,0.15) 40%, rgba(9,12,17,0) 100%),
+		linear-gradient(0deg, rgba(9,12,17,1) 25%, rgba(9,12,17,0.45) 32%, rgba(9,12,17,0) 100%),
+		center / cover no-repeat url('../img/hero4.png');
+}

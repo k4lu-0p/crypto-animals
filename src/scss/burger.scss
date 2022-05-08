@@ -1,0 +1,21 @@
+.burger {
+  width: 26px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.burger svg rect {
+  transition: transform 0.3s;
+}
+
+.burger-active {
+  svg rect:nth-child(1) {
+    transform: rotate(45deg) translate(15%, -10%);
+  }
+  svg rect:nth-child(2) {
+    transform: rotate(-45deg) translate(-50%, 20%);
+  }
+  svg rect:nth-child(3) { 
+    transform: rotate(-45deg) translate(-50%, -20%);
+  }
+}

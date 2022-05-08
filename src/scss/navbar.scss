@@ -1,0 +1,12 @@
+#navbar {
+  transition: all 0.1s ease;
+}
+
+.sticky-menu {
+  @apply py-5 lg:px-32 z-10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  @apply bg-gray-500/20 shadow-2xl;
+	backdrop-filter: blur(40px) brightness(60%);
+}

@@ -1,0 +1,18 @@
+
+.button {
+	@apply text-base font-mono font-bold uppercase;
+	@apply px-10 py-3;
+	@apply rounded-2xl;
+	// @apply transition-colors;
+  transition: all 0.5s ease;
+	
+	&-filled {
+		@apply bg-white border border-white text-black;
+		@apply hover:bg-lightgray;
+	}
+
+	&-bordered {
+		@apply bg-transparent border border-white text-white;
+		@apply hover:bg-white hover:text-black;
+	}
+}
